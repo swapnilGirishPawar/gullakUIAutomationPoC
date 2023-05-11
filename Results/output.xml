@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on darwin)" generated="20221108 16:58:29.108" rpa="false" schemaversion="3">
+<suite id="s1" name="SanityTests" source="/Users/admin/Desktop/Proj_Gullak/test_gullak/Tests/SanityTests.robot">
+<kw name="Application in android" library="Common" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${server}</arg>
+<arg>platformName=${platform}</arg>
+<arg>deviceName=${device}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>automationName=${automationName}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221108 16:58:29.439" endtime="20221108 16:58:38.719"/>
+</kw>
+<kw name="Onboarding Page Is opened Completely" library="Common">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:58:38.720" endtime="20221108 16:58:48.512"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:38.719" endtime="20221108 16:58:48.513"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Page Should Contain Element</arg>
+<arg>${g_nextButton}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221108 16:58:48.898" level="INFO">Current page contains element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:58:48.513" endtime="20221108 16:58:48.898"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:48.513" endtime="20221108 16:58:48.899"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Application opened."</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 16:58:48.899" endtime="20221108 16:58:48.899"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:38.719" endtime="20221108 16:58:48.899"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:29.437" endtime="20221108 16:58:48.899"/>
+</kw>
+<test id="s1-t1" name="TC_01 - Verify whether new user onboarding with valid credentials." line="18">
+<kw name="Navigate to the phone screen." library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:58:48.903" endtime="20221108 16:58:49.269"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:48.902" endtime="20221108 16:58:49.269"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:58:49.274" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:58:49.269" endtime="20221108 16:58:49.996"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:58:50.003" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:58:49.997" endtime="20221108 16:58:51.070"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:58:51.077" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:58:51.071" endtime="20221108 16:58:52.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 16:58:54.150" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221108 16:58:52.148" endtime="20221108 16:58:54.151"/>
+</kw>
+<status status="PASS" starttime="20221108 16:58:48.902" endtime="20221108 16:58:54.151"/>
+</kw>
+<kw name="Enter phone number" library="Onboarding">
+<arg>${i_phoneNumber3}</arg>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_phoneNumber}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20221108 16:59:24.498" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2122"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.google.android.gms" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[27,651][1053,1637]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,696][1008,1592]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.google.android.gms" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,696][1008,1592]" displayed="true"&gt;
+        &lt;android.widget.FrameLayout index="0" package="com.google.android.gms" class="android.widget.FrameLayout" text="" resource-id="com.google.android.gms:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,696][1008,1592]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.google.android.gms" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,696][1008,1592]" displayed="true"&gt;
+            &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" content-desc="Choose an Account" resource-id="com.google.android.gms:id/credential_picker_layout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,696][1008,1592]" displayed="true"&gt;
+              &lt;android.widget.TextView index="0" package="com.google.android.gms" class="android.widget.TextView" text="Continue with" resource-id="com.google.android.gms:id/credentials_hint_picker_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,764][940,825]" displayed="true" /&gt;
+              &lt;android.widget.FrameLayout index="1" package="com.google.android.gms" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,825][1008,1434]" displayed="true"&gt;
+                &lt;android.widget.ListView index="0" package="com.google.android.gms" class="android.widget.ListView" text="" resource-id="com.google.android.gms:id/credential_picker_options" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,825][985,1434]" displayed="true"&gt;
+                  &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" content-desc="077607 15358" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,825][985,1028]" displayed="true"&gt;
+                    &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,825][985,1028]" displayed="true"&gt;
+                      &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" resource-id="com.google.android.gms:id/default_credential_avatar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,870][253,983]" displayed="true"&gt;
+                        &lt;android.widget.ImageView index="0" package="com.google.android.gms" class="android.widget.ImageView" text="" resource-id="com.google.android.gms:id/default_credential_avatar_icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[162,892][230,960]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                      &lt;android.widget.LinearLayout index="1" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,896][940,957]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.google.android.gms" class="android.widget.TextView" text="077607 15358" resource-id="com.google.android.gms:id/credential_primary_label" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,896][584,957]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                    &lt;/android.widget.LinearLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="1" package="com.google.android.gms" class="android.widget.LinearLayout" text="" content-desc="084319 45277" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,1028][985,1231]" displayed="true"&gt;
+                    &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,1028][985,1231]" displayed="true"&gt;
+                      &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" resource-id="com.google.android.gms:id/default_credential_avatar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,1073][253,1186]" displayed="true"&gt;
+                        &lt;android.widget.ImageView index="0" package="com.google.android.gms" class="android.widget.ImageView" text="" resource-id="com.google.android.gms:id/default_credential_avatar_icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[162,1095][230,1163]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                      &lt;android.widget.LinearLayout index="1" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,1099][940,1160]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.google.android.gms" class="android.widget.TextView" text="084319 45277" resource-id="com.google.android.gms:id/credential_primary_label" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,1099][584,1160]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                    &lt;/android.widget.LinearLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="2" package="com.google.android.gms" class="android.widget.LinearLayout" text="" content-desc="072081 44314" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,1231][985,1434]" displayed="true"&gt;
+                    &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[95,1231][985,1434]" displayed="true"&gt;
+                      &lt;android.widget.LinearLayout index="0" package="com.google.android.gms" class="android.widget.LinearLayout" text="" resource-id="com.google.android.gms:id/default_credential_avatar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,1276][253,1389]" displayed="true"&gt;
+                        &lt;android.widget.ImageView index="0" package="com.google.android.gms" class="android.widget.ImageView" text="" resource-id="com.google.android.gms:id/default_credential_avatar_icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[162,1298][230,1366]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                      &lt;android.widget.LinearLayout index="1" package="com.google.android.gms" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,1302][940,1363]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.google.android.gms" class="android.widget.TextView" text="072081 44314" resource-id="com.google.android.gms:id/credential_primary_label" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,1302][584,1363]" displayed="true" /&gt;
+                      &lt;/android.widget.LinearLayout&gt;
+                    &lt;/android.widget.LinearLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                &lt;/android.widget.ListView&gt;
+              &lt;/android.widget.FrameLayout&gt;
+              &lt;android.widget.LinearLayout index="2" package="com.google.android.gms" class="android.widget.LinearLayout" text="" resource-id="com.google.android.gms:id/button_area" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[128,1434][952,1569]" displayed="true"&gt;
+                &lt;android.widget.Button index="0" package="com.google.android.gms" class="android.widget.Button" text="NONE OF THE ABOVE" resource-id="com.google.android.gms:id/cancel" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[128,1434][556,1569]" displayed="true" /&gt;
+              &lt;/android.widget.LinearLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.FrameLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 16:59:25.255" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 16:59:24.499" endtime="20221108 16:59:25.256"/>
+</kw>
+<msg timestamp="20221108 16:59:25.257" level="FAIL">Element locator 'xpath=//*[@content-desc='phoneNumberField']' did not match any elements after 30 seconds</msg>
+<status status="FAIL" starttime="20221108 16:58:54.153" endtime="20221108 16:59:25.257"/>
+</kw>
+<status status="FAIL" starttime="20221108 16:58:54.152" endtime="20221108 16:59:25.259"/>
+</kw>
+<kw name="Phone screen assertion" library="Onboarding">
+<status status="NOT RUN" starttime="20221108 16:59:25.259" endtime="20221108 16:59:25.259"/>
+</kw>
+<kw name="Click A Point" library="AppiumLibrary">
+<arg>x=200</arg>
+<arg>y=200</arg>
+<arg>duration=100</arg>
+<doc>Click on a point</doc>
+<status status="NOT RUN" starttime="20221108 16:59:25.259" endtime="20221108 16:59:25.259"/>
+</kw>
+<kw name="Wait and enter the text/Number" library="Common">
+<arg>${g_phoneNumber}</arg>
+<arg>${testNumber}</arg>
+<status status="NOT RUN" starttime="20221108 16:59:25.259" endtime="20221108 16:59:25.259"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20221108 16:59:25.260" endtime="20221108 16:59:25.260"/>
+</kw>
+<status status="FAIL" starttime="20221108 16:58:54.152" endtime="20221108 16:59:25.260"/>
+</kw>
+<kw name="Enter otp and navigate next screen" library="Onboarding">
+<status status="NOT RUN" starttime="20221108 16:59:25.260" endtime="20221108 16:59:25.261"/>
+</kw>
+<kw name="Enter name and age" library="Onboarding">
+<status status="NOT RUN" starttime="20221108 16:59:25.261" endtime="20221108 16:59:25.261"/>
+</kw>
+<kw name="Navigate to the home screen." library="Onboarding">
+<status status="NOT RUN" starttime="20221108 16:59:25.261" endtime="20221108 16:59:25.261"/>
+</kw>
+<kw name="Rest Android Application" library="Common" type="TEARDOWN">
+<kw name="Reset Application" library="AppiumLibrary">
+<doc>Reset application. Open Application can be reset while Appium session is kept alive.</doc>
+<status status="PASS" starttime="20221108 16:59:25.262" endtime="20221108 16:59:27.918"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:25.262" endtime="20221108 16:59:27.919"/>
+</kw>
+<tag>newuser</tag>
+<tag>sanity</tag>
+<status status="FAIL" starttime="20221108 16:58:48.900" endtime="20221108 16:59:27.919">Element locator 'xpath=//*[@content-desc='phoneNumberField']' did not match any elements after 30 seconds</status>
+</test>
+<test id="s1-t2" name="TC_02 - verify whether user able to login with valid referral code." line="28">
+<kw name="Navigate to the phone screen." library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:27.925" endtime="20221108 16:59:36.277"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:27.923" endtime="20221108 16:59:36.278"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:36.283" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:59:36.278" endtime="20221108 16:59:36.499"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:36.505" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:59:36.500" endtime="20221108 16:59:37.673"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:37.678" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:59:37.673" endtime="20221108 16:59:37.992"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 16:59:39.993" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221108 16:59:37.993" endtime="20221108 16:59:39.994"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:27.920" endtime="20221108 16:59:39.994"/>
+</kw>
+<kw name="Enter phone number" library="Onboarding">
+<arg>${i_phoneNumber2}</arg>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_phoneNumber}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:39.996" endtime="20221108 16:59:46.410"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:39.995" endtime="20221108 16:59:46.410"/>
+</kw>
+<kw name="Phone screen assertion" library="Onboarding">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_otpButtonText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 16:59:46.579" level="INFO">Current page contains text 'Get OTP'.</msg>
+<status status="PASS" starttime="20221108 16:59:46.411" endtime="20221108 16:59:46.579"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_phoneScreenText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 16:59:46.727" level="INFO">Current page contains text 'Welcome to Gullak'.</msg>
+<status status="PASS" starttime="20221108 16:59:46.580" endtime="20221108 16:59:46.727"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:46.411" endtime="20221108 16:59:46.727"/>
+</kw>
+<kw name="Click A Point" library="AppiumLibrary">
+<arg>x=200</arg>
+<arg>y=200</arg>
+<arg>duration=100</arg>
+<doc>Click on a point</doc>
+<msg timestamp="20221108 16:59:46.732" level="INFO">Clicking on a point (200,200).</msg>
+<status status="PASS" starttime="20221108 16:59:46.727" endtime="20221108 16:59:48.527"/>
+</kw>
+<kw name="Wait and enter the text/Number" library="Common">
+<arg>${g_phoneNumber}</arg>
+<arg>${testNumber}</arg>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${Element}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:48.529" endtime="20221108 16:59:48.713"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:48.528" endtime="20221108 16:59:48.714"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Element}</arg>
+<arg>${inputParamaeter}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:48.719" level="INFO">Typing text '1234567892' into text field 'xpath=//*[@content-desc='phoneNumberField']'</msg>
+<status status="PASS" starttime="20221108 16:59:48.714" endtime="20221108 16:59:49.500"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:48.527" endtime="20221108 16:59:49.500"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:49.505" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:59:49.501" endtime="20221108 16:59:50.278"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:39.994" endtime="20221108 16:59:50.279"/>
+</kw>
+<kw name="Enter otp and navigate next screen" library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_otpField}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:50.282" endtime="20221108 16:59:53.052"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:50.280" endtime="20221108 16:59:53.053"/>
+</kw>
+<kw name="OTP screen assertion" library="Onboarding">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_VerifyOtpButtonText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 16:59:53.168" level="INFO">Current page contains text 'Verify OTP'.</msg>
+<status status="PASS" starttime="20221108 16:59:53.054" endtime="20221108 16:59:53.169"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:53.053" endtime="20221108 16:59:53.169"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${g_otpField}</arg>
+<arg>${i_userOtp}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:53.174" level="INFO">Typing text '101122' into text field 'xpath=//*[@content-desc='otpField']'</msg>
+<status status="PASS" starttime="20221108 16:59:53.169" endtime="20221108 16:59:54.158"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:54.164" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 16:59:54.158" endtime="20221108 16:59:55.390"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:50.279" endtime="20221108 16:59:55.392"/>
+</kw>
+<kw name="Enter refferal code" library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_refferalCodeCheckbox}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:55.394" endtime="20221108 16:59:57.200"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:55.393" endtime="20221108 16:59:57.200"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_refferalCodeCheckbox}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:57.206" level="INFO">Clicking element 'xpath=//*[@content-desc='referralCheckBox']'.</msg>
+<status status="PASS" starttime="20221108 16:59:57.200" endtime="20221108 16:59:57.428"/>
+</kw>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_refferalCodeField}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:57.429" endtime="20221108 16:59:58.279"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:57.428" endtime="20221108 16:59:58.280"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${g_refferalCodeField}</arg>
+<arg>1ABSDS</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:58.286" level="INFO">Typing text '1ABSDS' into text field 'xpath=//*[@content-desc='referralCodeField']'</msg>
+<status status="PASS" starttime="20221108 16:59:58.280" endtime="20221108 16:59:58.513"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:55.392" endtime="20221108 16:59:58.513"/>
+</kw>
+<kw name="Enter name and age" library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nameField}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 16:59:58.514" endtime="20221108 16:59:59.134"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:58.513" endtime="20221108 16:59:59.134"/>
+</kw>
+<kw name="Name &amp; Age screen assertion" library="Onboarding">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_nameScreenText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 16:59:59.290" level="INFO">Current page contains text 'Fill in your details'.</msg>
+<status status="PASS" starttime="20221108 16:59:59.134" endtime="20221108 16:59:59.290"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:59.134" endtime="20221108 16:59:59.290"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${g_nameField}</arg>
+<arg>${i_userName}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 16:59:59.296" level="INFO">Typing text 'Test User' into text field 'xpath=//*[@content-desc='enterNameField']'</msg>
+<status status="PASS" starttime="20221108 16:59:59.291" endtime="20221108 17:00:00.108"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${g_ageField}</arg>
+<arg>${i_userAge}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:00.114" level="INFO">Typing text '99' into text field 'xpath=//*[@content-desc='enterAgeField']'</msg>
+<status status="PASS" starttime="20221108 17:00:00.108" endtime="20221108 17:00:01.366"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:01.373" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:01.367" endtime="20221108 17:00:02.072"/>
+</kw>
+<status status="PASS" starttime="20221108 16:59:58.513" endtime="20221108 17:00:02.072"/>
+</kw>
+<kw name="Navigate to the home screen." library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 17:00:03.860" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 17:00:03.179" endtime="20221108 17:00:03.861"/>
+</kw>
+<msg timestamp="20221108 17:00:03.861" level="FAIL">StaleElementReferenceException: Message: Cached elements 'By.xpath: //*[@content-desc='nextButton']' do not exist in DOM anymore
+</msg>
+<status status="FAIL" starttime="20221108 17:00:02.073" endtime="20221108 17:00:03.866"/>
+</kw>
+<status status="FAIL" starttime="20221108 17:00:02.073" endtime="20221108 17:00:03.867"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20221108 17:00:03.867" endtime="20221108 17:00:03.867"/>
+</kw>
+<kw name="Home screen assertion" library="Onboarding">
+<status status="NOT RUN" starttime="20221108 17:00:03.867" endtime="20221108 17:00:03.867"/>
+</kw>
+<status status="FAIL" starttime="20221108 17:00:02.072" endtime="20221108 17:00:03.868"/>
+</kw>
+<kw name="Rest Android Application" library="Common" type="TEARDOWN">
+<kw name="Reset Application" library="AppiumLibrary">
+<doc>Reset application. Open Application can be reset while Appium session is kept alive.</doc>
+<status status="PASS" starttime="20221108 17:00:03.869" endtime="20221108 17:00:05.937"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:03.869" endtime="20221108 17:00:05.937"/>
+</kw>
+<tag>refferalnewuser</tag>
+<tag>sanity</tag>
+<status status="FAIL" starttime="20221108 16:59:27.920" endtime="20221108 17:00:05.938">StaleElementReferenceException: Message: Cached elements 'By.xpath: //*[@content-desc='nextButton']' do not exist in DOM anymore
+</status>
+</test>
+<test id="s1-t3" name="TC_03 - Verify log in flow for return user." line="39">
+<kw name="Navigate to the phone screen." library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 17:00:05.941" endtime="20221108 17:00:14.917"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:05.940" endtime="20221108 17:00:14.917"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:14.935" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:14.918" endtime="20221108 17:00:15.233"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:15.239" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:15.234" endtime="20221108 17:00:16.301"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:16.308" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:16.301" endtime="20221108 17:00:17.417"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 17:00:19.419" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221108 17:00:17.418" endtime="20221108 17:00:19.419"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:05.940" endtime="20221108 17:00:19.419"/>
+</kw>
+<kw name="Enter phone number" library="Onboarding">
+<arg>${i_phoneNumber3}</arg>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_phoneNumber}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 17:00:19.420" endtime="20221108 17:00:25.687"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:19.420" endtime="20221108 17:00:25.687"/>
+</kw>
+<kw name="Phone screen assertion" library="Onboarding">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_otpButtonText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 17:00:25.803" level="INFO">Current page contains text 'Get OTP'.</msg>
+<status status="PASS" starttime="20221108 17:00:25.688" endtime="20221108 17:00:25.803"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_phoneScreenText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 17:00:25.956" level="INFO">Current page contains text 'Welcome to Gullak'.</msg>
+<status status="PASS" starttime="20221108 17:00:25.803" endtime="20221108 17:00:25.957"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:25.688" endtime="20221108 17:00:25.957"/>
+</kw>
+<kw name="Click A Point" library="AppiumLibrary">
+<arg>x=200</arg>
+<arg>y=200</arg>
+<arg>duration=100</arg>
+<doc>Click on a point</doc>
+<msg timestamp="20221108 17:00:25.962" level="INFO">Clicking on a point (200,200).</msg>
+<status status="PASS" starttime="20221108 17:00:25.957" endtime="20221108 17:00:27.734"/>
+</kw>
+<kw name="Wait and enter the text/Number" library="Common">
+<arg>${g_phoneNumber}</arg>
+<arg>${testNumber}</arg>
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${Element}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 17:00:27.735" endtime="20221108 17:00:27.917"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:27.735" endtime="20221108 17:00:27.917"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Element}</arg>
+<arg>${inputParamaeter}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:27.922" level="INFO">Typing text '1234567893' into text field 'xpath=//*[@content-desc='phoneNumberField']'</msg>
+<status status="PASS" starttime="20221108 17:00:27.917" endtime="20221108 17:00:28.153"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:27.734" endtime="20221108 17:00:28.154"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:28.159" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:28.154" endtime="20221108 17:00:28.915"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:19.419" endtime="20221108 17:00:28.915"/>
+</kw>
+<kw name="Enter otp and navigate next screen" library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_otpField}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221108 17:00:28.917" endtime="20221108 17:00:31.949"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:28.916" endtime="20221108 17:00:31.949"/>
+</kw>
+<kw name="OTP screen assertion" library="Onboarding">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${e_VerifyOtpButtonText}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20221108 17:00:32.086" level="INFO">Current page contains text 'Verify OTP'.</msg>
+<status status="PASS" starttime="20221108 17:00:31.950" endtime="20221108 17:00:32.086"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:31.949" endtime="20221108 17:00:32.086"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${g_otpField}</arg>
+<arg>${i_userOtp}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:32.091" level="INFO">Typing text '101122' into text field 'xpath=//*[@content-desc='otpField']'</msg>
+<status status="PASS" starttime="20221108 17:00:32.087" endtime="20221108 17:00:33.928"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 17:00:33.934" level="INFO">Clicking element 'xpath=//*[@content-desc='nextButton']'.</msg>
+<status status="PASS" starttime="20221108 17:00:33.929" endtime="20221108 17:00:35.140"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:28.916" endtime="20221108 17:00:35.140"/>
+</kw>
+<kw name="Navigate to the home screen." library="Onboarding">
+<kw name="Wait For Element Visibility" library="Common">
+<arg>${g_nextButton}</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 17:00:37.646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 17:00:36.935" endtime="20221108 17:00:37.646"/>
+</kw>
+<msg timestamp="20221108 17:00:37.647" level="FAIL">StaleElementReferenceException: Message: androidx.test.uiautomator.StaleObjectException
+</msg>
+<status status="FAIL" starttime="20221108 17:00:35.142" endtime="20221108 17:00:37.647"/>
+</kw>
+<status status="FAIL" starttime="20221108 17:00:35.141" endtime="20221108 17:00:37.649"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${g_nextButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20221108 17:00:37.649" endtime="20221108 17:00:37.649"/>
+</kw>
+<kw name="Home screen assertion" library="Onboarding">
+<status status="NOT RUN" starttime="20221108 17:00:37.649" endtime="20221108 17:00:37.649"/>
+</kw>
+<status status="FAIL" starttime="20221108 17:00:35.140" endtime="20221108 17:00:37.650"/>
+</kw>
+<kw name="Rest Android Application" library="Common" type="TEARDOWN">
+<kw name="Reset Application" library="AppiumLibrary">
+<doc>Reset application. Open Application can be reset while Appium session is kept alive.</doc>
+<status status="PASS" starttime="20221108 17:00:37.651" endtime="20221108 17:00:39.733"/>
+</kw>
+<status status="PASS" starttime="20221108 17:00:37.650" endtime="20221108 17:00:39.733"/>
+</kw>
+<tag>returnuser</tag>
+<tag>sanity</tag>
+<status status="FAIL" starttime="20221108 17:00:05.938" endtime="20221108 17:00:39.733">StaleElementReferenceException: Message: androidx.test.uiautomator.StaleObjectException
+</status>
+</test>
+<kw name="Close All Applications" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20221108 17:00:39.735" endtime="20221108 17:00:40.186"/>
+</kw>
+<status status="FAIL" starttime="20221108 16:58:29.110" endtime="20221108 17:00:40.186"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">newuser</stat>
+<stat pass="0" fail="1" skip="0">refferalnewuser</stat>
+<stat pass="0" fail="1" skip="0">returnuser</stat>
+<stat pass="0" fail="3" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="SanityTests">SanityTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221108 16:58:29.318" level="WARN">Imported resource file '/Users/admin/Desktop/Proj_Gullak/test_gullak/AppLocators/Android/UpiPaymentsLocators.robot' is empty.</msg>
+<msg timestamp="20221108 16:58:29.319" level="WARN">Imported resource file '/Users/admin/Desktop/Proj_Gullak/test_gullak/AppLocators/Android/UserSettingsLocators.robot' is empty.</msg>
+</errors>
+</robot>

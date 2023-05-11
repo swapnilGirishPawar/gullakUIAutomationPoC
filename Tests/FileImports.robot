@@ -1,0 +1,23 @@
+*** Settings ***
+#Locator Resources
+Resource    ../AppLocators/CommonAppLocators.robot
+Resource    ../AppLocators/DailySavingsLocators.robot
+Resource    ../AppLocators/HomeScreenLocators.robot
+Resource    ../AppLocators/OnboardingLocators.robot
+Resource    ../AppLocators/ManualPayLocators.robot
+Resource    ../AppLocators/HomeScreenLocators.robot
+Resource    ../AppLocators/UserSettingsLocators.robot
+Resource    ../AppLocators/SaveOnSpendsLocators.robot
+Resource    ../AppLocators/upiPaymentsLocators.robot
+#Utils Resources
+Resource    ../Resources/Utils/API.robot
+Resource    ../Resources/Utils/Config.robot
+Resource    ../Resources/Utils/Helpers.robot
+#Feature Resources
+Resource    ../Resources/Features/Common.robot
+Resource    ../Resources/Features/Goals.robot
+Resource    ../Resources/Features/HomeScreen.robot
+Resource    ../Resources/Features/ManualPay.robot
+Resource    ../Resources/Features/Onboarding.robot
+Resource    ../Resources/Features/UpiPayments.robot
+Resource    ../Resources/Features/UserSettings.robot

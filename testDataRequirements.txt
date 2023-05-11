@@ -1,0 +1,5 @@
+new test user := 1234567893
+return test user := 123456783
+new user with refferal code := 1234567892
+
+test user with active mandate := 1234567898
